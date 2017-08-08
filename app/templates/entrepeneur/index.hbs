@@ -1,0 +1,13 @@
+<div class="panel panel-default entrepeneur">
+    <div class="panel-heading">
+        <h3 class="panel-title"></h3>
+    </div>
+    <div class="panel-body">
+{{#each model as |entrepeneur|}}
+        {{#customer-item item=entrepeneur}}
+            {{#link-to 'entrepeneur.edit' entrepeneur.id class='btn btn-success btn-xs'}}Edit{{/link-to}}
+            <button class="btn btn-danger btn-xs" {{action 'deleteEntrepeneur' entrepeneur}}>Delete</button>
+        {{/customer-item}}
+{{/each}}
+    </div>
+</div>
