@@ -24,6 +24,16 @@ const Validations = buildValidations({
     })
   ],
   address: validator('presence', true),
+  
+  zipCode: [
+    validator('presence', true),
+    validator('length', { is: 4 }),
+    validator('number', {
+      allowString: true,
+      integer: true
+    })
+  ],
+
   priority: [
      validator('presence', true),
      validator('number', {
@@ -44,6 +54,7 @@ export default DS.Model.extend(
   phoneNumber: DS.attr('number'),
   cvr: DS.attr('number'),
   address: DS.attr('string'),
+  zipCode: DS.attr('number'),
   comment: DS.attr('string'),
   priority: DS.attr('number')
 });
