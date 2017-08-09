@@ -19,8 +19,13 @@ export default Ember.Route.extend({
 
   actions: {
 
+    
+
     saveEntrepeneur(newEntrepeneur) {
-      newEntrepeneur.save().then(() => this.transitionTo('entrepeneur'));
+          newEntrepeneur.save().then(() => this.transitionTo('entrepeneur'));
+        }
+
+      
     },
 
     willTransition() {
@@ -30,5 +35,4 @@ export default Ember.Route.extend({
         model.destroyRecord();
       }
     }
-  }
-});
+  });
