@@ -12,6 +12,10 @@ Router.map(function() {
   this.route('entrepeneur', function() {
     this.route('new');
     this.route('edit', { path: './:entrepeneur_id/edit' });
+  }),
+    this.route('photographers', function() {
+    this.route('new');
+    this.route('edit', { path: './:photographers_id/edit' });
   })
 });
 

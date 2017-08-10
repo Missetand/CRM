@@ -3,23 +3,24 @@ import Ember from 'ember';
 export default Ember.Route.extend({
 
   model(params) {
-    return this.store.findRecord('entrepeneur', params.entrepeneur_id);
+    return this.store.findRecord('photographers', params.photographers_id);
   },
 
   setupController(controller, model) {
     this._super(controller, model);
 
-    controller.set('title', 'Edit Entrepeneur');
+    controller.set('title', 'Edit Photographers');
     controller.set('buttonLabel', 'Save changes');
   },
 
   renderTemplate() {
-    this.render('entrepeneur/forms');
+    this.render('photographers/forms');
   },
 
   actions: {
 
-      willTransition(transition) {
+
+    willTransition(transition) {
       let model = this.controller.get('model');
 
       if (model.get('hasDirtyAttributes')) {
@@ -32,9 +33,10 @@ export default Ember.Route.extend({
         }
       }
     },
-    saveEntrepeneur(entrepeneur) {
-      entrepeneur.save().then(() => this.transitionTo('entrepeneur'));
-    }
+    savePhotographers(photographers) {
+      photographers.save().then(() => this.transitionTo('photographers'));
+    },
+
 
   }
 });
