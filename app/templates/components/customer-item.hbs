@@ -1,54 +1,38 @@
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Firm Name</th>
-            <th>CVR</th>
-            <th>Email</th>
-            <th>Phone Number</th>
-            <th>Address</th>
-            <th>Zip Code</th>
-            <th>Comment</th>
-            <th>Priority</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                {{item.firmName}}
-            </td>
+<div class="panel panel-default customer-item">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{item.firmName}}</h3>
+    </div>
+    <div class="panel-body">
+        <p>
+            CVR Number: {{item.cvr}}
+        </p>
 
 
-            <td>
-                {{item.cvr}}
-            </td>
+        <p>
+            Email: {{item.email}}
+        </p>
 
+        <p>
+            Phone Number: {{item.phoneNumber}}
+        </p>
 
-            <td>
-                {{item.email}}
-            </td>
+        <p>
+            Address: {{item.address}}
+        </p>
 
-            <td>
-                {{item.phoneNumber}}
-            </td>
+        <p>
+            Zip Code: {{item.zipCode}}
+        </p>
 
-            <td>
-                {{item.address}}
-            </td>
+        <p>
+            Comment: {{item.comment}}
+        </p>
+        <p>
+            Priority: {{item.priority}}
+        </p>
 
-            <td>
-                {{item.zipCode}}
-            </td>
-
-            <td>
-                {{item.comment}}
-            </td>
-            <td>
-                {{item.priority}}
-            </td>
-
-        </tr>
-    </tbody>
-</table>
-<div class="panel-footer text-right">
-    {{yield}}
+    </div>
+    <div class="panel-footer text-right">
+        {{yield}}
+    </div>
 </div>

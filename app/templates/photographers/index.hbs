@@ -1,13 +1,11 @@
-<div class="panel panel-default photographers">
-    <div class="panel-heading">
-        <h3 class="panel-title"></h3>
-    </div>
-    <div class="panel-body">
+
+<div class="row">
 {{#each model as |photographers|}}
+    <div class="col-md-4">
         {{#customer-item item=photographers}}
             {{#link-to 'photographers.edit' photographers.id class='btn btn-success btn-xs'}}Edit{{/link-to}}
             <button class="btn btn-danger btn-xs" {{action 'deletePhotographers' photographers}}>Delete</button>
         {{/customer-item}}
-{{/each}}
     </div>
+{{/each}}
 </div>

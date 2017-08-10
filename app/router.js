@@ -6,17 +6,21 @@ const Router = Ember.Router.extend({
   rootURL: config.rootURL
 });
 
-Router.map(function() {
+Router.map(function () {
   this.route('about');
 
-  this.route('entrepeneur', function() {
+  this.route('entrepeneur', function () {
     this.route('new');
     this.route('edit', { path: './:entrepeneur_id/edit' });
   }),
-    this.route('photographers', function() {
-    this.route('new');
-    this.route('edit', { path: './:photographers_id/edit' });
-  })
+    this.route('photographers', function () {
+      this.route('new');
+      this.route('edit', { path: './:photographers_id/edit' });
+    }),
+    this.route('meadiahouses', function () {
+      this.route('new');
+      this.route('edit', { path: './:mediahouses_id/edit' });
+    })
 });
 
 export default Router;
