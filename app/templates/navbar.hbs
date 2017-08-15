@@ -36,8 +36,18 @@
           </ul>
         </li>
         {{#link-to 'about' tagName="li"}}<a href>About</a>{{/link-to}}
-
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+        <p class="navbar-text"> Logged in as {{session.currentUser.email}}</p>
+          
+    <button {{action 'logout'}} type="button" class="btn btn-default navbar-btn">
+          <span class="glyphicon glyphicon-log-out"></span> Log out
+        </button>
+          </li>
+        </ul>
       </ul>
+
+
     </div>
     <!-- /.navbar-collapse -->
   </div>
